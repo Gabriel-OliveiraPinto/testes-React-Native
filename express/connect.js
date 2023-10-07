@@ -1,5 +1,6 @@
 const mysql = require('mysql');
-
+// Esse é o arquivo que estabelece as configurações para se conectar com o
+// banco de dados local
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',

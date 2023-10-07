@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const app = express();
 const port = 3000;
 const connection = require('./connect');
-
+// Esse é o arquivo do servidor que controla as ações ao receber os Requests
 app.use(bodyParser.json())
 
 let articles = [

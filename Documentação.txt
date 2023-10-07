@@ -1,0 +1,16 @@
+ENDEREÇO PARA GET/PUT
+O endereço para pegar do server.js não pode ser nem o localhost nem o numero associado ao localhost. Tem que ser o seu IPv4. Para saber qual é, abre o terminal e jogue o comando ipconfig
+BIBLIOTECAS UTILIZADAS
+Não consegui usar o fetch normal. Precisei utilizar o axios para os requests do frontend e o bodyParser para formatar os dados em JSON no server.js
+Ao invés de mysql2, preferi utilizar o mysql padrão como pacote. Utilizei este link como referência para saber como utilizar: https://www.mysqltutorial.org/mysql-nodejs/insert/
+Utilizar este site como referência de requisições com Axios: https://blog.logrocket.com/using-axios-with-react-native-manage-api-requests/
+BANCO DE DADOS
+Finalmente consegui fazer funcionar o fluxo app -> server -> database. Eu crio um módulo chamado connection no arquivo connect.js, 
+onde é criado a variável já configurada para se conectar com o banco de dados reactnative no mysql.
+O server.js importa essa variável como connection e a utiliza para fazer as manipulações no banco com base no imput do usuário.
+A única manipulação implementada é um SELECT que o servidor faz assim que é inicializado, para preencher a variável articles com tudo que a table articles do banco de dados tem e
+a partir do endpoint do POST, é coletado os dados colocados pelo usuário depois de clicar no botão SUBMIT e são inseridos no banco de dados.
+Agora precisa-se limpar os códigos para ficarem mais legíveis E resolver certos problemas, como atualizar a variável articles toda vez que o banco de dados é alterado, e 
+atualizar a lista no aplicativo sempre que for necessário.
+
+
